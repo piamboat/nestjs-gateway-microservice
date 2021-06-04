@@ -2,7 +2,6 @@ import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 import { CreateMemberDto } from './dto/create-member-dto';
 import { GetMemberDto } from './dto/get-member-dto';
-import { Observable } from 'rxjs';
 
 @Injectable()
 export class MemberService {
