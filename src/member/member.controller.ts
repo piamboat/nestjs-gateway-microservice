@@ -23,4 +23,9 @@ export class MemberController {
   getMembers(@Query(ValidationPipe) getMemberDto: GetMemberDto) {
     return this.memberService.getMembers(getMemberDto);
   }
+
+  @Get('/hello')
+  sayHello() {
+    return this.memberService.sayHello();
+  }
 }

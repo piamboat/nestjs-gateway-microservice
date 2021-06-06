@@ -17,4 +17,8 @@ export class MemberService {
   getMembers(getMemberDto: GetMemberDto) {
     return this.client.send<string, GetMemberDto>('get-members', getMemberDto);
   }
+
+  sayHello() {
+    return this.client.emit('hello', 'Hello from RabbitMQ!'); // this.client.emit(pattern, data)
+  }
 }
