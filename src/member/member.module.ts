@@ -8,10 +8,15 @@ import { MemberService } from './member.service';
     ClientsModule.register([
       {
         name: 'MEMBER_SERVICE',
-        transport: Transport.TCP,
+        transport: Transport.RMQ,
         options: {
-          host: '127.0.0.1',
-          port: 8877,
+          urls: [
+            'amqps://ykihgmxy:bHDLrFmm59AVzPvKV_gjhC2t9LrTDcTd@gerbil.rmq.cloudamqp.com/ykihgmxy',
+          ],
+          queue: 'main_queue',
+          queueOptions: {
+            durable: false,
+          },
         },
       },
     ]),
