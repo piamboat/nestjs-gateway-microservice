@@ -25,3 +25,14 @@ import { MemberService } from './member.service';
   providers: [MemberService],
 })
 export class MemberModule {}
+
+// ClientsModule.register([
+//   {
+//     name: 'MEMBER_SERVICE',
+//     transport: Transport.TCP,
+//     options: {
+//       host: '127.0.0.1',
+//       port: 8877,
+//     },
+//   },
+// ]),
